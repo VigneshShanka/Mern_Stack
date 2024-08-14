@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="api">get api</button>
+    <h1 id="h1_id">sample</h1>
+
+    <script>
+        async function getApi() {
+            let res =  await fetch("https://reqres.in/api/users",{"method":"GET"});
+            let json = await res.json();
+            console.log(json);
+        }
+        re= document.getElementById("api").addEventListener("click",getApi);
+        console.log(re);
+
+    </script>
+</body>
+</html>
